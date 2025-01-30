@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2b2b2b; 
+    color: #ddd8d8; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 10vh;
+}
+
+.container {
+    background: #3a3a3a; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 40px; 
+    padding: 20px;
+}
+.container img {
+    display: block;
+    margin: 0 auto; 
+    max-width: 100%; 
+    height: auto;
+    border-radius: 8px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ffffff; 
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+    color: #a7a5a5; 
+}
+
+input, button {
+    margin-top: 5px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #5d5d5d; 
+    border-radius: 5px;
+    background-color: #4a4a4a; 
+    color: #ffffff; 
+}
+
+input:focus {
+    outline: none;
+    border-color: #ee1313; 
+}
+
+input.matrix-input {
+    width: 50px;
+    text-align: center;
+    background-color: #4a4a4a; 
+    color: #ffffff;
+    border: 1px solid #555555;
+}
+
+button {
+    background-color: #ee1b1b; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #cc0000; 
+}
+
+.button-container {
+    display: flex; /* Prikazuje dugmad u nizu */
+    justify-content: center; /* Poravnava centrirano */
+    gap: 15px; /* Razmak između dugmadi */
+    margin-top: 20px; /* Gornji razmak */
+}
+
+.button-container button {
+    background-color: #ff0000; /* Boja pozadine */
+    color: white; /* Boja teksta */
+    border: none; /* Bez ivica */
+    border-radius: 5px; /* Zaobljeni uglovi */
+    padding: 10px 20px; /* Prostiranje unutar dugmeta */
+    font-size: 16px; /* Veličina teksta */
+    cursor: pointer; /* Promena kursora na hover */
+    transition: background-color 0.3s ease; /* Efekat prelaza za hover */
+}
+
+.button-container button:hover {
+    background-color: #cc0000; /* Tamnija nijansa crvene prilikom hovera */
+}
+
+
+
+
+
+.matrix-container {
+    margin-top: 20px;
+}
+
+table {
+    margin: 10px 0;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #3a3a3a; 
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #555555;
+    color: #e0e0e0; 
+}
+
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #5e5959; 
+    border: 1px solid #f10000; 
+    border-radius: 5px;
+    text-align: center;
+    color: #ce9c9c; 
+}
+
+.result p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #eabdbd; 
+}
+
+
+nav {
+    background-color: #191818; 
+    padding: 10px 0;
+    text-align: center;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #fa1b1b; 
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff; 
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ff4d4d; 
+}
+
+
+
+.explanation {
+    background-color: #2e2e2e; 
+    color: #e0e0e0;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.explanation p {
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #b7b5b5; 
+}
+
+.okvir {
+    background-color: #2e2e2e; 
+    color: #cecccc; 
+    padding: 10px;
+    text-align: left;
+    
+}
+
+.okvir h2 {
+    color: #ffffff; 
+    margin-bottom: 10px;
+}
+
+.okvir p {
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #c3bfbf; 
+}
+
+footer {
+    text-align: center;
+    margin-top: auto; 
+    padding: 10px 0;
+    background-color: #333333; 
+    color: #e0e0e0; 
+    font-size: 0.9em;
+    border-top: 2px solid #f93030; 
+
+}
+
+
+
+
+

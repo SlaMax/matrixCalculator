@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Calculator</title>
+    <link rel="stylesheet" href="../css_file/calculator_det.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Matrix</a></li>
+            <li><a href="determinant.html">Matrix Calculator</a></li>
+            <li><a href="sum.html">Matrix operation</a></li>
+        </ul>
+    </nav>
+    <section class="explanation">
+        <div class="container">
+            <p>This calculator allows the computation of the determinant, trace, the 2-norm, rank, transpose and invers
+                of a square matrix.</p>
+            <p>Enter the dimension of the matrix to get started!</p>
+            <p>Make sure the input values are valid before calculating results to avoid errors.</p>
+        </div>
+    </section>
+
+    <section class="okvir">
+        <div class="container">
+            <h1>Matrix Calculator</h1>
+            <label for="matrix-size">Enter Matrix Dimension (n x n):</label>
+            <input type="number" id="matrix-size" placeholder="e.g., 3" required>
+            
+
+            <div class="button-container">
+                <button onclick="generateMatrix(false)">Generate Matrix Inputs</button>
+                <button onclick="generateMatrix(true)">Generate Random Matrix </button>
+            </div>
+            <div class="matrix-container" id="matrix-container"></div>
+            <button id="calculate-button" style="display:none;">Calculate</button>
+
+
+
+
+            <div class="result" id="result-container" style="display: none;"></div>
+        </div>
+    </section>
+
+
+    <section class="okvir">
+        <div class="container">
+            <h2>Determinant</h2>
+            <p>The determinant of a matrix is a single numerical value which is used when calculating the inverse or
+                when solving systems of linear equations. The determinant of a matrix A is denoted |A|, or sometimes
+                det(A).
+                The determinant is only defined for square matrices.
+                There are several different methods for solving determinants, such as Laplace expansion:</p>
+            <img src="../image/formula laplas.png" alt="Laplace expansion">
+            <p>For easier understanding of the formula, let's take a look at the following image.</p>
+            <img src="../image/laplass.png" alt="primjer">
+        </div>
+    </section>
+    <section class="okvir">
+        <div class="container">
+            <h2>Matrix norm</h2>
+            <p>A matrix norm is a number defined in terms of the entries of the matrix. The norm is a useful
+                quantity which can give important information about a matrix.</p>
+            <p>The norm of a square matrix A is a non-negative real number denoted ||A||. There are several
+                different ways of defining a matrix norm, but they all share the following properties:
+            <p>1. ||A|| ≥ 0 for any square matrix A.</p>
+            <p>2. ||A|| = 0 if and only if the matrix A = 0.</p>
+            <p>3. ||kA|| = |k| ||A||, for any scalar k.</p>
+            <p>4. ||A + B|| ≤ ||A|| + ||B||.</p>
+            <p>5. ||AB|| ≤ ||A|| ||B||.</p>
+            The norm of a matrix is a measure of how large its elements are. </p>
+            <p>This is the formula for 2.norm:</p>
+            <img src="../image/formulnorm.png" alt="formula za 2 normu">
+        </div>
+    </section>
+    <section class="okvir">
+        <div class="container">
+            <h2>Trace of a matrix</h2>
+            <p>The trace of a matrix is the sum of the diagonal elements of a square matrix. It is a fundamental concept
+                in linear algebra and has various applications in mathematical and applied fields. The trace of a matrix
+                is widely used in physics to calculate the expectation values of operators in quantum mechanics. In
+                statistics, it measures the total variability of a dataset when applied to covariance matrices.</p>
+            <p>This is the formula for 2.norm:</p>
+            <img src="../image/formula trace.png" alt="formula">
+            <p>For easier understanding of the formula, let's take a look at the following image.</p>
+            <img src="../image/trace.png" alt="trace">
+        </div>
+    </section>
+
+
+    <section class="okvir">
+        <div class="container">
+            <h2>Rank of a matrix</h2>
+            <p>The rank of a matrix is the maximum number of linearly independent rows or columns in the matrix. It is
+                denoted as rank(A), where A is the matrix.
+                The rank is used in various fields such as:<br>
+                - Linear algebra: To determine the solution space of linear systems.<br>
+                - Data science: In dimensionality reduction techniques like PCA.<br>
+                - Engineering and physics: To analyze the behavior of systems of equations.<br>
+                - Computer graphics: For transformations and projections.
+            </p>
+            <p>
+                If you want to learn more about the rank of a matrix, visit the following link:
+                <a href="https://www.geeksforgeeks.org/rank-of-matrix/" target="_blank">Rank</a>.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="okvir">
+        <div class="container">
+            <h2>The transpose of a matrix</h2>
+            <p>The transpose of a matrix is a new matrix obtained by swapping its rows and columns.
+                It is denoted as Aᵀ, where A is the original matrix.
+                For a matrix A with elements aᵢⱼ, the transpose Aᵀ has elements aⱼᵢ.<br>
+                The transpose is used in:<br>
+                - Linear algebra: To work with matrix operations and vector spaces.<br>
+                - Computer graphics: For transformations and rotation matrices.<br>
+                - Data science: In operations like data reshaping or transposing datasets.<br>
+                - Physics and engineering: In systems involving multiple dimensions or coordinates.<br>
+            </p>
+            <p>For better understanding, let's look at an example:</p>
+            <img src="../image/transpose.png" alt="primjer">
+        </div>
+    </section>
+
+    <section class="okvir">
+        <div class="container">
+            <h2>Inverse of a matrix</h2>
+            <p>The inverse of a matrix is a matrix, denoted as A⁻¹, such that when it is multiplied by the original
+                matrix A, it results in the identity matrix:<br>
+
+                A × A⁻¹ = A⁻¹ × A = I<br>
+
+                where I is the identity matrix.
+                The inverse exists only for square matrices with a non-zero determinant.<br>
+                It is used in:<br>
+                - Solving linear systems: To find solutions using matrix equations.<br>
+                - Engineering and physics: For systems modeling and transformations.<br>
+                - Computer graphics: For coordinate transformations and scaling.<br>
+                - Optimization problems: To compute solutions efficiently.
+            </p>
+            <p>The formula for calculating the inverse of a matrix is:</p>
+            <img src="../image/inverz.png" alt="formula">
+        </div>
+    </section>
+
+
+
+
+    <footer>
+        <p>&copy; 2025 Robert Slamnjaković.</p>
+        <p>Contact:</p>
+        <ul style="display: flex; justify-content: center; list-style: none; padding: 0;">
+            <li style="margin: 0 10px;">
+                <a href="https://www.instagram.com/robert_slama/?hl=am-et" target="_blank">
+                    <img src="../image/foter/instagram.png" alt="Instagram" width="30" height="30">
+                </a>
+            </li>
+            <li style="margin: 0 10px;">
+                <a href="https://www.facebook.com/robert.slamnjakovic" target="_blank">
+                    <img src="../image/foter/facebook.png" alt="Facebook" width="30" height="30">
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+
+    <script src="../js_file/script.js"></script>
+</body>
+
+</html>

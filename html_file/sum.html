@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Calculator</title>
+    <link rel="stylesheet" href="../css_file/calculator_det.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Matrix</a></li>
+            <li><a href="determinant.html">Matrix Calculator</a></li>
+            <li><a href="sum.html">Matrix operation</a></li>
+        </ul>
+    </nav>
+
+    <section class="explanation">
+        <div class="container">
+            <p>This calculator allows the addition, subtraction, and multiplication of two matrices.</p>
+            <p>Enter the dimension of the matrix to get started!</p>
+            <p>Make sure the input values are valid before calculating results.</p>
+        </div>
+    </section>
+
+    <section class="okvir">
+        <div class="container">
+            <h1>Matrix Calculator</h1>
+
+            <label for="matrix-size">Enter Matrix Dimension (n x n):</label>
+            <input type="number" id="matrix-size" placeholder="e.g., 3" required>
+           
+            <div class="button-container">
+                <button onclick="generateMatrices(false)">Generate Matrix Inputs</button>
+                <button onclick="generateMatrices(true)">Generate Random Matrices</button>
+            </div>
+            <div class="matrix-container" id="matrix-container"></div>
+            <div>
+                <button id="calculate-addition"
+                    onclick="calculateMatrix('add',parseInt(document.getElementById('matrix-size').value))"
+                    style="display: none;">Add Matrices</button>
+                <button id="calculate-subtraction"
+                    onclick="calculateMatrix('subtract',parseInt(document.getElementById('matrix-size').value))"
+                    style="display: none;">Subtract Matrices</button>
+                <button id="calculate-multiplication"
+                    onclick="calculateMatrix('multiply',parseInt(document.getElementById('matrix-size').value))"
+                    style="display: none;">Multiply Matrices</button>
+            </div>
+
+            <div class="result" id="result-container" style="display: none;"></div>
+
+        </div>
+    </section>
+
+    <section class="okvir">
+        <div class="container">
+            <h2>Sum of 2 matrix</h2>
+            <p>Two matrices can be added together if and only if they have the same dimension, that is, if they have the
+                same number of rows and columns.</p>
+            <p>Their sum is obtained by summing each element of one matrix to the corresponding element of the other
+                matrix.</p>
+            <p>Let's look at an example for better understanding:</p>
+            <img src="../image/sum.png" alt="sum">
+        </div>
+    </section>
+
+    <section class="okvir">
+        <div class="container">
+            <h2>Subtraction of 2 matrix</h2>
+            <p>The subtraction of matrices or matrix subtraction can only be possible if the number of rows and columns
+                of both the matrices are the same. While subtracting two matrices, we subtract the elements in each row
+                and column from the corresponding elements in the row and column of the other matrix.</p>
+            <p>Let's look at an example for better understanding:</p>
+            <img src="../image/oduzimanje.png" alt="oduzimanje">
+        </div>
+    </section>
+
+    <section class="okvir">
+        <div class="container">
+            <h2>Matrix multiplication </h2>
+            <p>For matrix multiplication, the number of columns in the first matrix must be equal to the number of rows
+                in the second matrix. The resulting matrix, known as the matrix product, has the number of rows of the
+                first and the number of columns of the second matrix. The product of matrices A and B is denoted as AB.
+            </p>
+            <p>Let's consider the general case where we have two 3x3 square matrices:</p>
+            <img src="../image/mnozenje.png" alt="mnozenje">
+            <p>For the first element in matrix C, the formula is:</p>
+            <img src="../image/mnozenje formula.png" alt="mnozenje">
+            <p>Now, let's look at an example where the matrices are not square:</p>
+            <img src="../image/mnozenje nekvadratna.png" alt="mnozenjeNK">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Robert Slamnjaković.</p>
+        <p>Contact:</p>
+        <ul style="display: flex; justify-content: center; list-style: none; padding: 0;">
+            <li style="margin: 0 10px;">
+                <a href="https://www.instagram.com/robert_slama/?hl=am-et" target="_blank">
+                    <img src="../image/foter/instagram.png" alt="Instagram" width="30" height="30">
+                </a>
+            </li>
+            <li style="margin: 0 10px;">
+                <a href="https://www.facebook.com/robert.slamnjakovic" target="_blank">
+                    <img src="../image/foter/facebook.png" alt="Facebook" width="30" height="30">
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="../js_file/script.js"></script>
+</body>
+
+</html>
