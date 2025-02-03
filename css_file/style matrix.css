@@ -79,11 +79,13 @@ nav ul li a {
     color: #cecaca; 
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.7s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #ee5757; 
+    color: #f42828; 
 }
+
 
 
 .container {
@@ -142,13 +144,14 @@ nav ul li a:hover {
     padding: 5px 10px; 
     background-color: #2e2e2e; 
     border-radius: 5px; 
+    transition: background-color 2s ease;
+    transition: color 1.5s ease-in-out;
 }
 
 .sub-nav ul li a:hover {
-    color: #ff4d4d; 
-    background-color: #333333; 
+    color: #f63434; 
+    background-color: #4d4c4c; 
 }
-
 
 
 
