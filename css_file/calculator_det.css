@@ -147,11 +147,13 @@ nav ul li a {
     color: #cecaca; 
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.7s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #ee5757; 
+    color: #f42828; 
 }
+
 
 
 
